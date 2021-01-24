@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            background: rgb(221, 248, 255);
+            /* padding: 10px; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }  
+
+        button {
+            background: none;
+            border: none;
+        }
+        .nav_icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .fa-bars {
+            display: none;
+        }
+        .nav_links {
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav_links li {
+            padding: 0 5px;
+            list-style: none;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav {
+                display: block;
+                /* flex-direction: column; */
+            }
+            .nav_links {
+                /* flex-direction: column;
+                justify-content: left; */
+                display: block;
+                padding: 5px 0;
+            }
+            .fa-bars {
+                display: block;
+            }
+            .nav_links li {
+                padding: 10px;
+                border: 1px solid rgb(197, 239, 255);
+            }
+            .nav_links li:hover {
+                background: white;
+                font-size: 1.2rem;
+                transition: 0.2s ease
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_icons">
+            <i class="fab fa-js-square fa-4x"></i>
+            <button><i class="fas fa-bars fa-3x hide"></i></button>
+        </div>
+        <ul class="nav_links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
