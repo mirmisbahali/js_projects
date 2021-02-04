@@ -23,5 +23,11 @@ fetch('todo.json')
     
 })
 
-
+// Adding New Task
+addBtn.addEventListener('click', function() {
+    text = todoInput.value
+    if (text != '') {
+        todoList.appendChild(ListItem(text))
+    }
+});
 
