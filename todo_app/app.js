@@ -13,9 +13,15 @@ const ListItem = (item) => {
     return li;
 }
 
+// Fetching Tasks
+fetch('todo.json')
+.then(response => response.json())
+.then(data => {
 
-
-
+    tasks = data
+    tasks.tasks.forEach(item => todoList.appendChild(ListItem(item)));
+    
+})
 
 
 
