@@ -17,10 +17,8 @@ const ListItem = (item) => {
 fetch('todo.json')
 .then(response => response.json())
 .then(data => {
-
     tasks = data
-    tasks.tasks.forEach(item => todoList.appendChild(ListItem(item)));
-    
+    tasks.tasks.forEach(item => todoList.appendChild(ListItem(item)));  
 })
 
 // Adding New Task
@@ -28,6 +26,7 @@ addBtn.addEventListener('click', function() {
     text = todoInput.value
     if (text != '') {
         todoList.appendChild(ListItem(text))
+        tasks.tasks.push(text);
     }
 });
 
