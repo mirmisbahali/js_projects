@@ -38,5 +38,17 @@ document.addEventListener('click', function(e){
     if(e.target.classList.contains('fa-trash')) {
         e.target.parentElement.remove()
     }
+
+    if (e.target.classList.contains('list-group-item')) {
+        lineThrough = 'text-decoration-line-through'
+
+        if(e.target.classList.contains(lineThrough))
+        {
+            e.target.classList.remove(lineThrough)
+        } else {
+            e.target.classList.add(lineThrough)
+        }
+        
+    }
 })
 
