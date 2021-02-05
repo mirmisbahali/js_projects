@@ -1,6 +1,7 @@
 const todoInput = document.querySelector('#todoItem');
 const todoList = document.querySelector('#todoList');
 const addBtn = document.querySelector('#addBtn');
+
 let tasks = null
 
 // ListItem Component
@@ -20,7 +21,8 @@ fetch('todo.json')
 .then(response => response.json())
 .then(data => {
     tasks = data
-    tasks.tasks.forEach(item => todoList.appendChild(ListItem(item)));  
+    tasks.tasks.forEach(item => todoList.appendChild(ListItem(item)));
+
 })
 
 // Adding New Task
@@ -31,4 +33,10 @@ addBtn.addEventListener('click', function() {
         tasks.tasks.push(text);
     }
 });
+
+document.addEventListener('click', function(e){
+    if(e.target.classList.contains('fa-trash')) {
+        e.target.parentElement.remove()
+    }
+})
 
