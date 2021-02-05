@@ -32,6 +32,7 @@ addBtn.addEventListener('click', function() {
         todoList.appendChild(ListItem(text))
         tasks.tasks.push(text);
     }
+    todoInput.value = ""
 });
 
 document.addEventListener('click', function(e){
